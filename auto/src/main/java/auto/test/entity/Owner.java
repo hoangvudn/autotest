@@ -7,8 +7,23 @@ public class Owner extends User {
         this.address = address;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+
+
     public User register(User user) {
         System.out.println("Name: "+this.name+ " Address: "+this.address);
         return new Owner(user.email,user.password,user.name,user.phone,this.address);
     }
+
 }
